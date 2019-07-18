@@ -1,3 +1,4 @@
+# Lesson 4
 # Control flow (bout dam' time)
 
 #if
@@ -87,7 +88,7 @@ news_ticker = ""
 
 idx = 0
 while True:     # just so we have an excuse to break
-    if len(news_ticker >= 140):
+    if len(news_ticker) >= 140):
         break
     if idx < len(headlines):
         news_ticker += headlines[idx] + ' '
@@ -95,9 +96,6 @@ while True:     # just so we have an excuse to break
 news_ticker = news_ticker[:140]
 print(news_ticker)
 print(len(news_ticker))
-
-
-# TODO
 
 # zip (combine two lists into a tuple)
 
@@ -108,22 +106,23 @@ cars = ['ford', 'jag', 'lambo', 'lada', 'rolls']
 for num, car in zip(num_list, cars):
     print("{} : {}".format(num, car))
 
-
 letters = ['a', 'b', 'c']
 nums = [1, 2, 3]
 
 l = list(zip(letters, nums))
 for tupl in l:
     print(tupl)
-    print("{}: {}".format(tupl[0], tupl(1)))
 
 letters_copy, nums_copy = zip(*l)
+print(letters_copy)
+print(nums_copy)
 
 # enumerate
 
 letters = ['a', 'b', 'c', 'd', 'e']
-for i, letter in enumerate(letters):
-    print(i, letter)
+l = list(enumerate(letters))
+for pair in l:
+    print(pair)
 
 # List comprehensions
 
